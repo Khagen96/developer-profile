@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+body{
+
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.hero_section{
+    font-style: Nunito Sans;
+    display: flex;
+    background-color: #2F2E41;
+    color: white;
+}
+.hero_text{
+    margin-top: 150px;
+    margin-right:100px;
+    margin-left: 120px;
+    font-size: 22px;
+    width: 30%;
+    text-align: left;
+
+    
+}
+.hero_img{
+    margin-left: 50px;
+}
+.second_heading{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #2F2E41;
+
+}
+hr{
+    margin-left: 50px;
+    margin-right: 50px;
+}
