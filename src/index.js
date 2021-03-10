@@ -1,15 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import HeroImage from './Components/hero'
-// import SearchBox from './Components/search_box'
-// import Footer from './Components/footer'
-import Modal from './Components/modal'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import DeveloperProfile from './Pages/dev_profile';
+import HomePage from './Pages/homepage';
+
+function App() {
+    return (
+      <Router>
+          {/* A <Switch> looks through its children <Route>s and
+              renders the first one that matches the current URL. */}
+          <Switch>
+            <Route exact path="/developers/:developerId" component={DeveloperProfile} />
+            <Route exact path="/" component={HomePage} />
+          </Switch>
+      </Router>
+    );
+  }
+  
+
+
+
  
 ReactDOM.render(
-<div>
-    <Modal/>
-</div>
-,
+<App />,
  document.getElementById('root')
 );
