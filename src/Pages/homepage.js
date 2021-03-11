@@ -1,31 +1,31 @@
 import React from 'react';
-// import HeroImage from './Components/hero'
-// import SearchBox from './Components/search_box'
-// import Footer from './Components/footer'
-// import Modal from './Components/modal'
+import Hero from '../Components/Hero';
+// import SearchBox from '../Components/search_box'
+// import Footer from '../Components/footer'
+// import Modal from '../Components/modal'
 
 
 class HomePage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: ''
+            developers: []
         }
     }
-
-    onChange = event => {
-        this.setState({ value: event.target.value });
-    }
-
-    onClick = () => {
-        window.location = `/developers/${this.state.value}`;
+    componentDidMount() {
+        fetch(`/api/developers/`)
+        .then((response) => response.json())
+        .then(response => {
+            this.setState({ developers: response });
+        });
     }
 
     render() {
         return (
             <div>
-                <label>Enter developer id: </label><input onChange={this.onChange} value={this.state.value} />
-                <button onClick={this.onClick}>Submit</button>
+                <Hero />
+                <div>Developers :{JSON.stringify(this.state.developers)}</div>
+
             </div>
         );
     }

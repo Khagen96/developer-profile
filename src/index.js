@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import DeveloperProfile from './Pages/dev_profile';
-import HomePage from './Pages/homepage';
+import DeveloperProfile from './Pages/DevloperProfile';
+import HomePage from './Pages/HomePage';
 
 function App() {
     return (
